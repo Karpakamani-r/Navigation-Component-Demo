@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.w2c.bn.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_home_to_home_detail"
+            app:destination="@id/navigation_home_detail" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_dashboard"
+        android:name="com.w2c.bn.ui.dashboard.DashboardFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_dashboard">
+
+        <action
+            android:id="@+id/action_db_to_db_detail"
+            app:destination="@id/navigation_db_detail" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_notifications"
+        android:name="com.w2c.bn.ui.notifications.NotificationsFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_notifications">
+
+        <action
+            android:id="@+id/action_not_to_notdet_detail"
+            app:destination="@id/navigation_notification_detail" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_home_detail"
+        android:name="com.w2c.bn.ui.home.HomeDetailFragment"
+        android:label="@string/home_detail"
+        tools:layout="@layout/fragment_home_detail" />
+
+    <fragment
+        android:id="@+id/navigation_db_detail"
+        android:name="com.w2c.bn.ui.dashboard.DashBoardDetailScreen"
+        android:label="@string/dashboard_detail"
+        tools:layout="@layout/fragment_dash_board_detail_screen" />
+
+    <fragment
+        android:id="@+id/navigation_notification_detail"
+        android:name="com.w2c.bn.ui.notifications.NotificationDetailFragment"
+        android:label="@string/notification_detail"
+        tools:layout="@layout/fragment_notification_detail" />
+
+</navigation>
